@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+    
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1em;
+    color: #444;
+}
+    
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(63, 97, 124);
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(100, 130, 154);
+}
+
+a {
+    color: rgb(75, 93, 173);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(142, 149, 180);
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
