@@ -101,6 +101,17 @@ router.post('/login', (req, res) => {
     });
 });
 
+// destroy user session
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    }
+})
+
 // PUT request to update user
 router.put('/:id', (req, res) => {
     User.update(req.body, {
