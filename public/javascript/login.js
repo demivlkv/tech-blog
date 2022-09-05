@@ -18,7 +18,8 @@ async function signupForm(event) {
 
         // check response status
         if (response.ok) {
-            console.log('Success!');
+            console.log('success');
+            document.location.replace('/dashboard/');
         } else {
             alert(response.statusText);
         }
@@ -43,7 +44,7 @@ async function loginForm(event) {
 
         // check response status
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/dashboard/');
         } else {
             alert(response.statusText);
         }
