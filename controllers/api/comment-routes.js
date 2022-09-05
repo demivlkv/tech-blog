@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
+const withAuth = require('../utils/auth');
 
 // GET request all comments
 router.get('/', (req, res) => {
@@ -12,7 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // CREATE new comment
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     // check the session
     if (req.session) {
         Comment.create({
@@ -29,7 +30,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT request to update a comment
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Comment.update(req.body, {
         where: {
             id: req.params.id
@@ -49,7 +50,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE request a comment by id
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
         where: {
             id: req.params.id
