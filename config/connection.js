@@ -1,5 +1,4 @@
 // import the Sequelize constructor from the library
-const { ExpressHandlebars } = require('express-handlebars');
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
