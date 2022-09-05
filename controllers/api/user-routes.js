@@ -86,7 +86,7 @@ router.post('/login', (req, res) => {
         // verify user
         const validPassword = dbUserData.checkPassword(req.body.password);
         if (!validPassword) {
-            res.status(400).json({ message: ' Incorrect password. Please try again.' });
+            res.status(400).json({ message: 'Incorrect password. Please try again.' });
             return;
         }
 
@@ -110,7 +110,7 @@ router.post('/logout', (req, res) => {
     } else {
         res.status(404).end();
     }
-})
+});
 
 // PUT request to update user
 router.put('/:id', (req, res) => {

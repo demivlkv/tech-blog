@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
 
@@ -7,12 +6,7 @@ const { Post, User, Comment } = require('../models');
 router.get('/', (req, res) => {
     console.log(req.session);
     Post.findAll({
-        attributes: [
-            'id',
-            'title',
-            'post_text',
-            'created_at'
-        ],
+        attributes: [ 'id', 'title', 'post_text', 'created_at' ],
         include: [
             {
                 model: Comment,
@@ -30,10 +24,7 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('homepage', {
-            posts,
-            loggedIn: req.session.loggedIn
-        });
+        res.render('homepage', { posts, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
         console.log(err);
@@ -56,12 +47,7 @@ router.get('/post/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: [
-            'id',
-            'title',
-            'post_text',
-            'created_at'
-        ],
+        attributes: [ 'id', 'title', 'post_text', 'created_at' ],
         include: [
             {
                 model: Comment,
@@ -83,14 +69,9 @@ router.get('/post/:id', (req, res) => {
             return;
         }
 
-        // serialize the data
+        // serialize the data & pass data into template
         const post = dbPostData.get({ plain: true });
-
-        // pass data to template
-        res.render('single-post', {
-            post,
-            loggedIn: req.session.loggedIn
-        });
+        res.render('single-post', { post, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
         console.log(err);

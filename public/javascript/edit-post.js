@@ -1,11 +1,14 @@
-async function newPost(event) {
+async function editPost(event) {
     event.preventDefault();
 
     const title = document.querySelector('input[name="post-title"]').value.trim();
     const post_text = document.querySelector('textarea[name="post-text"]').value.trim();
+    const id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ];
 
-    const response = await fetch(`/api/posts`, {
-        method: 'POST',
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
         body: JSON.stringify({
             title,
             post_text
@@ -22,4 +25,4 @@ async function newPost(event) {
     }
 };
 
-document.querySelector('.new-post').addEventListener('submit', newPost);
+document.querySelector('.edit-post').addEventListener('submit', editPost);
