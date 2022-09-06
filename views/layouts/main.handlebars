@@ -11,26 +11,31 @@
 
     <div class="wrapper">
         <header>
+            <nav>
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/dashboard">dashboard</a></li>
+                    {{#if loggedIn}}
+                    <li><button id="logout" class="btn-no-style">logout</button></li>
+                    {{else}}
+                    <li><a href="/login">login</a></li>
+                    {{/if}}
+                </ul>
+            </nav>
             <h1>
                 <a href="/">Tech Blog</a>
             </h1>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/dashboard">dashboard</a>
-                <button id="logout" class="btn-no-style">logout</button>
-                {{else}}
-                <a href="/login">login</a>
-                {{/if}}
-            </nav>
         </header>
 
-        <main>
-            {{{ body }}}
-        </main>
+        <div class="main-content">
+            <main>
+                {{{ body }}}
+            </main>
 
-        <footer>
-            Made with &hearts; by <a href="https://github.com/demivlkv" target="_blank">Demi</a>
-        </footer>
+            <footer>
+                Made with &hearts; by <a href="https://github.com/demivlkv" target="_blank">Demi</a>
+            </footer>
+        </div>
     </div>
     
     {{#if loggedIn}}
