@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
-
 // render homepage template
 router.get('/', (req, res) => {
     console.log(req.session);
@@ -30,15 +29,6 @@ router.get('/', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-});
-
-// render login template
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
-    res.render('login');
 });
 
 // render single post template
@@ -77,6 +67,24 @@ router.get('/post/:id', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
+});
+
+// render login template
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
+// render signup template
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/dashboard');
+        return;
+    }
+    res.render('signup');
 });
 
 module.exports = router;
