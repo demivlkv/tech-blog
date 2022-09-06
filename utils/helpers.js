@@ -1,6 +1,6 @@
 module.exports = {
     format_date: date => {
-        return`${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(date).getFullYear()}`;
+        return`${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(date).getFullYear()} @ ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
     },
     format_plural: (word, amount) => {
         if (amount !== 1) {

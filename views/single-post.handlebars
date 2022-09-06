@@ -11,6 +11,10 @@
 </form>
 {{/if}}
 
+<h2 class="comment">
+    {{post.comments.length}} {{format_plural "comment" post.comments.length}}
+</h2>
+
 {{> comments post.comments}}
 
 {{#if loggedIn}}

@@ -1,10 +1,10 @@
-/*:root {
-    --first: #333;
-    --second: #e2dddf;
-    --third: #f5f5f5;
-    --fourth: #494fc1;
-    --fifth: #fd084a;
-}*/
+:root {
+    --first: #fd084a;
+    --second: #222;
+    --third: #f0f0f0;
+    --fourth: #fdfdfd;
+    --fifth: #494fc1;
+}
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -14,10 +14,10 @@ body, html {
     height: 100%;
     margin: 0 auto;
     padding: 0;
-    background-color: #fdfdfd;
+    background-color: var(--fourth);
     font-family: 'Helvetica', Arial, sans-serif;
     font-size: 1em;
-    color: #333;
+    color: var(--second);
     line-height: 1.8em;
 }
 
@@ -31,17 +31,17 @@ body, html {
 }
 
 .content {
-    background-color: #f0f0f0;
+    background-color: var(--third);
     padding: 20px;
 }
 
 a, a:visited {
-    color: #222;
+    color: var(--second);
     text-decoration: none;
 }
 
 a:hover {
-    color: #fd084a;
+    color: var(--first);
     text-decoration: none;
 }
 
@@ -65,37 +65,69 @@ header nav ul {
 
 header nav ul li {
     padding: 15px 20px;
-    color: #222;
+    color: var(--second);
     font-size: 18px;
+}
+
+button.btn-no-style {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--second);
+}
+
+button.btn-no-style:hover {
+    background-color: transparent;
+    color: var(--first);
 }
     
 h1 {
+    border-bottom: 4px solid var(--first);
     font-size: 48px;
     font-weight: bold;
-    color: #222;
-    padding-left: 62px;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+    padding: 0 0 40px 62px;
 }
 
 /* MAIN CONTENT */
 
 ol {
     list-style: none;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+    padding-inline-start: 0 !important;
 }
 
 h2, article div.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: wrap;
+    margin: 0 auto 15px auto;
+    padding-bottom: 15px;
+    color: var(--second);
     font-size: 30px;
     font-weight: bold;
     letter-spacing: -1px;
-    color: #222;
-    margin: 0 auto 15px auto;
+    border-bottom: 2px solid var(--first);
+}
+
+div.title div.meta {
     padding: 0;
+    color: #888;
+    font-size: initial;
+    font-weight: normal;
+    letter-spacing: normal;
 }
 
 article.post {
-    background-color: #f0f0f0;
-    padding: 20px;
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--third);
 }
+
+/* FORMS */
 
 form {
     width: 50%;
@@ -111,18 +143,18 @@ form {
 }
 
 label {
-    color: #333;
-    font-weight: bold;
     display: block;
+    font-weight: bold;
 }
 
 input {
     width: 100%;
     margin: 8px;
-    padding: 10px 15px;
-    background-color: #fdfdfd;
-    color: #333;
-    border: 1px solid #333;
+    padding: 10px 10px;
+    background-color: var(--fourth);
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid var(--second);
     border-radius: 3px;
 }
 
@@ -131,63 +163,126 @@ textarea {
     height: 150px;
     resize: vertical;
     margin: 8px;
-    padding: 10px 15px;
-    background-color: #fdfdfd;
-    color: #333;
-    border: 1px solid #333;
-    border-radius: 3px;
+    padding: 10px 10px;
+    background-color: var(--fourth);
+    color: var(--second);
     font-family: inherit;
     font-size: inherit;
+    border: 1px solid var(--second);
+    border-radius: 3px;
 }
 
 button {
     width: 100%;
     margin: 8px;
     padding: 12px 15px;
-    background-color: #fd084a;
+    background-color: var(--first);
+    color: var(--third);
     font-family: inherit;
     font-size: inherit;
-    color: #f0f0f0;
     text-align: center;
     border: 0;
     border-radius: 3px;
 }
 
 button:hover {
-    background-color: #222;
+    background-color: var(--second);
     cursor: pointer;
 }
 
 /* COMMENTS */
 
-.meta {
-    margin-top: 15px;
-    color: #888;
+h2.comment {
+    margin-top: 20px;
 }
 
-.meta a, .meta a:visited {
-    color: #fd084a;
-    text-decoration: none;
+section.comment {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--third);
 }
 
-.meta a:hover {
-    color: #222;
-    text-decoration: none;
+section.comment div.meta {
+    margin: 0;
+}
+
+form.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    margin: 8px;
+    padding: 10px 10px;
+    background-color: var(--third);
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+/* DASHBOARD */
+
+ol.edit-link {
+    margin: 0;
+    list-style: none;
+}
+
+.edit-link {
+    width: 60%;
+    display: flex;
+    margin: 20px auto;
+    padding: 12px 12px;
+    border-radius: 3px;
+    background-color: var(--first);
+    color: var(--third) !important;
+    text-align: center;
+    border: 0;
+}
+
+.edit-link:hover  {
+    background-color: var(--second);
+    cursor: pointer;
+}
+
+article.edit-post h2 {
+    margin: 20px auto;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.delete-post-btn {
+    width: 100%;
+    margin: 8px;
+    padding: 12px 15px;
+    background-color: transparent;
+    color: var(--first);
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    border: 2px solid var(--first);
+    border-radius: 3px;
+}
+
+.delete-post-btn:hover {
+    background-color: transparent;
+    color: var(--second);
+    border: 2px solid var(--second);
 }
 
 /* FOOTER */
 
 footer {
-    padding: 20px 20px;
+    padding: 30px;
     text-align: center;
 }
 
 footer a, footer a:visited {
-    color: #fd084a;
+    color: var(--first);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #222;
+    color: var(--second);
     text-decoration: none;
 }
