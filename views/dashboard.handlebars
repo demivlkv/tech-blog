@@ -2,20 +2,21 @@
 
     {{#if posts.length}}
     <section class="dashboard">
+        
         <h2>Your Posts</h2>
         <ol>
             {{#each posts as |post|}}
             <li>
-                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}} {{format_date post.created_at}}</a>
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}} <span>{{format_date post.created_at}}</span></a>
             </li>
             {{/each}}
         </ol>
+
     </section>
     {{/if}}
 
-    <section>
-        
+    <section align="center">
+        <a href="/dashboard/addpost" class="secondary-btn"><i class="fa-solid fa-plus"></i> create post</a>
     </section>
-</div>
 
-<script src="/javascript/add-post.js"></script>
+</div>

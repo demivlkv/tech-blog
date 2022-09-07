@@ -76,4 +76,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 })
 
+// render add new post template
+router.get('/addpost', withAuth, (req, res) => {
+    res.render('add-post', { loggedIn: true });
+});
+
 module.exports = router;

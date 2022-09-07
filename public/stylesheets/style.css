@@ -69,14 +69,14 @@ header nav ul li {
     font-size: 18px;
 }
 
-button.btn-no-style {
+.btn-no-style {
     margin: 0;
     padding: 0;
     background-color: transparent;
     color: var(--second);
 }
 
-button.btn-no-style:hover {
+.btn-no-style:hover {
     background-color: transparent;
     color: var(--first);
 }
@@ -110,10 +110,11 @@ h2, article div.title {
     font-size: 30px;
     font-weight: bold;
     letter-spacing: -1px;
-    border-bottom: 2px solid var(--first);
+    border-bottom: 3px solid var(--first);
 }
 
-div.title div.meta {
+div.meta {
+    margin: 0;
     padding: 0;
     color: #888;
     font-size: initial;
@@ -150,7 +151,7 @@ label {
 input {
     width: 100%;
     margin: 8px;
-    padding: 10px 10px;
+    padding: 10px;
     background-color: var(--fourth);
     font-family: inherit;
     font-size: inherit;
@@ -163,7 +164,7 @@ textarea {
     height: 150px;
     resize: vertical;
     margin: 8px;
-    padding: 10px 10px;
+    padding: 10px;
     background-color: var(--fourth);
     color: var(--second);
     font-family: inherit;
@@ -202,33 +203,17 @@ section.comment {
     background-color: var(--third);
 }
 
-section.comment div.meta {
-    margin: 0;
-}
-
 form.comment-form textarea {
-    width: 100%;
     height: 100px;
-    resize: vertical;
-    margin: 8px;
-    padding: 10px 10px;
-    background-color: var(--third);
-    font-family: inherit;
-    font-size: inherit;
-    border: 1px solid #999;
-    border-radius: 3px;
 }
 
 /* DASHBOARD */
 
-ol.edit-link {
-    margin: 0;
-    list-style: none;
-}
-
 .edit-link {
     width: 60%;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 20px auto;
     padding: 12px 12px;
     border-radius: 3px;
@@ -251,12 +236,17 @@ article.edit-post h2 {
     letter-spacing: -1px;
 }
 
-.delete-post-btn {
+form.comment-form {
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.secondary-btn {
     width: 100%;
     margin: 8px;
     padding: 12px 15px;
     background-color: transparent;
-    color: var(--first);
+    color: var(--first) !important;
     font-family: inherit;
     font-size: inherit;
     text-align: center;
@@ -264,9 +254,9 @@ article.edit-post h2 {
     border-radius: 3px;
 }
 
-.delete-post-btn:hover {
+.secondary-btn:hover {
     background-color: transparent;
-    color: var(--second);
+    color: var(--second) !important;
     border: 2px solid var(--second);
 }
 
