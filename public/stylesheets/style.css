@@ -48,7 +48,7 @@ a:hover {
 /* HEADER */
 
 header {
-    padding: 20px 35px;
+    padding: 35px;
 }
 
 header nav {
@@ -65,7 +65,6 @@ header nav ul {
 
 header nav ul li {
     padding: 15px 20px;
-    color: var(--second);
     font-size: 18px;
 }
 
@@ -87,7 +86,7 @@ h1 {
     font-weight: bold;
     text-transform: lowercase;
     letter-spacing: -1px;
-    padding: 0 0 40px 62px;
+    padding: 0 0 32px 62px;
 }
 
 /* MAIN CONTENT */
@@ -106,7 +105,6 @@ h2, article div.title {
     flex: wrap;
     margin: 0 auto 15px auto;
     padding-bottom: 15px;
-    color: var(--second);
     font-size: 30px;
     font-weight: bold;
     letter-spacing: -1px;
@@ -114,8 +112,6 @@ h2, article div.title {
 }
 
 div.meta {
-    margin: 0;
-    padding: 0;
     color: #888;
     font-size: initial;
     font-weight: normal;
@@ -150,7 +146,7 @@ label {
 
 input {
     width: 100%;
-    margin: 8px;
+    margin: 8px 0;
     padding: 10px;
     background-color: var(--fourth);
     font-family: inherit;
@@ -163,7 +159,7 @@ textarea {
     width: 100%;
     height: 150px;
     resize: vertical;
-    margin: 8px;
+    margin: 8px 0;
     padding: 10px;
     background-color: var(--fourth);
     color: var(--second);
@@ -175,7 +171,7 @@ textarea {
 
 button {
     width: 100%;
-    margin: 8px;
+    margin: 8px 0;
     padding: 12px 15px;
     background-color: var(--first);
     color: var(--third);
@@ -215,12 +211,10 @@ form.comment-form textarea {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 20px auto;
-    padding: 12px 12px;
+    padding: 12px;
     border-radius: 3px;
     background-color: var(--first);
     color: var(--third) !important;
-    text-align: center;
-    border: 0;
 }
 
 .edit-link:hover  {
@@ -243,10 +237,10 @@ form.comment-form {
 
 .secondary-btn {
     width: 100%;
-    margin: 8px;
+    margin: 8px 0;
     padding: 12px 15px;
     background-color: transparent;
-    color: var(--first) !important;
+    color: var(--first);
     font-family: inherit;
     font-size: inherit;
     text-align: center;
@@ -256,6 +250,24 @@ form.comment-form {
 
 .secondary-btn:hover {
     background-color: transparent;
+    color: var(--second);
+    border: 2px solid var(--second);
+}
+
+section.add-post {
+    margin: 15px;
+    text-align: center;
+}
+
+section.add-post a,
+section.add-post a:visited {
+    padding: 12px 15px;
+    color: var(--first) !important;
+    border: 2px solid var(--first);
+    border-radius: 3px;
+}
+    
+section.add-post a:hover {
     color: var(--second) !important;
     border: 2px solid var(--second);
 }
@@ -269,10 +281,8 @@ footer {
 
 footer a, footer a:visited {
     color: var(--first);
-    text-decoration: none;
 }
 
 footer a:hover {
     color: var(--second);
-    text-decoration: none;
 }
