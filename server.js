@@ -16,7 +16,10 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
     secret: 'The secret formula for the Krabby Patty',
-    cookie: {},
+    cookie: {
+        // session expires after 10 minutes
+        maxAge: 10 * 6000
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({

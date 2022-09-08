@@ -20,6 +20,7 @@ The purpose of this project was to built a CMS-style blog site - similar to a Wo
 Feel free to use the `guest` account with these credentials to explore this web application:
 
 > **Username:** guest
+
 > **Password:** password
 
 ## Questions
