@@ -276,7 +276,12 @@ section.add-post a:hover {
 
 footer {
     padding: 30px;
+    font-size: 0.9em;
     text-align: center;
+}
+
+footer span {
+    color: var(--first);
 }
 
 footer a, footer a:visited {
