@@ -14,7 +14,7 @@ The purpose of this project was to built a CMS-style blog site - similar to a Wo
 ![screenshot.png](/../main/assets/images/screenshot.png)
 
 ### Live View:
-[https://serene-taiga-02049.herokuapp.com/](https://serene-taiga-02049.herokuapp.com/)
+[https://frozen-sierra-30429.herokuapp.com/](https://frozen-sierra-30429.herokuapp.com/)
 
 ## Usage
 Feel free to use the `guest` account with these credentials to explore this web application:

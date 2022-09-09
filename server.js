@@ -18,7 +18,7 @@ const sess = {
     secret: 'The secret formula for the Krabby Patty',
     cookie: {
         // session expires after 10 minutes
-        maxAge: 10 * 6000
+        maxAge: 10 * 60 * 1000
     },
     resave: false,
     saveUninitialized: true,
