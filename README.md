@@ -36,7 +36,7 @@ node server.js
 ## Usage
 Feel free to use the `guest` account with these credentials to explore the functionality of this web application:
 
-> **Username:** guest **Password:** password
+> **Username:** guest **Password:** rlalo4fz4l
 
 An unregistered user will be able to navigate to the `homepage`, `login`, or `signup` links, as well as view blog posts without being able to leave comments.
 
