@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// render dashboard menu & load user posts if any
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
         where: {
@@ -36,7 +37,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-// edit a single post
+// render edit post template
 router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {

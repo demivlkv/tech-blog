@@ -16,12 +16,33 @@ The purpose of this project was to built a CMS-style blog site - similar to a Wo
 ### Live View:
 [https://frozen-sierra-30429.herokuapp.com/](https://frozen-sierra-30429.herokuapp.com/)
 
+## Installation
+1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the green ‘Code’ button at the top of this repository—as long as it is in your local branch.
+2. Ensure Node.js is installed in your operating system.
+3. Create a `.env` file in the root directory with the following information, and include your MySQL username (DB_USER) and password (DB_PASSWORD) between the single quotes:
+```
+DB_NAME='tech_blog_db'
+DB_USER=''
+DB_PASSWORD=''
+```
+4. Install ***all*** of the npm packages listed above via command-line in terminal.
+5. Initialize MySQL by running `mysql -u root -p`, and enter your password when prompted. Once loaded, enter `SOURCE db/schema.sql;` to create the database. Exit MySQL by entering `quit;` in terminal.
+6. The application can be accessed by visiting `http://localhost:3001` in the browser after running the following command:
+```
+node server.js
+```
+7. [Insomnia](https://insomnia.rest/) or [Postman](https://www.postman.com/) can be used to check the backend functionality.
+
 ## Usage
-Feel free to use the `guest` account with these credentials to explore this web application:
+Feel free to use the `guest` account with these credentials to explore the functionality of this web application:
 
-> **Username:** guest
+> **Username:** guest **Password:** password
 
-> **Password:** password
+An unregistered user will be able to navigate to the `homepage`, `login`, or `signup` links, as well as view blog posts without being able to leave comments.
+
+On the other hand, a registered user will have access to the `dashboard`, where they could create, edit, or delete posts. In addition, a registered user will have to ability to leave comments on blog posts. A `logout` button will be displayed in the navigation upon login.
+
+The user's session will automatically expire after 10 minutes of idle activity.
 
 ## Questions
 For any questions about this repository, please contact me at [demi.h@me.com](mailto:demi.h@me.com).

@@ -21,13 +21,9 @@ body, html {
     line-height: 1.8em;
 }
 
-.wrapper {
-    margin: 0 auto;
-}
-
 .main-content {
     margin: 0 auto;
-    width: 75%;
+    width: 70%;
 }
 
 .content {
@@ -83,7 +79,6 @@ header nav ul li {
 h1 {
     border-bottom: 4px solid var(--first);
     font-size: 48px;
-    font-weight: bold;
     text-transform: lowercase;
     letter-spacing: -1px;
     padding: 0 0 32px 62px;
