@@ -17,7 +17,7 @@ The purpose of this project was to built a CMS-style blog site - similar to a Wo
 [https://frozen-sierra-30429.herokuapp.com/](https://frozen-sierra-30429.herokuapp.com/)
 
 ## Installation
-1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the green ‘Code’ button at the top of this repository—as long as it is in your local branch.
+1. To install this application, `git clone` this repository, or download the `.zip` file in the dropdown after clicking the ‘Code’ button at the top of this repository—as long as it is in your local branch.
 2. Ensure Node.js is installed in your operating system.
 3. Create a `.env` file in the root directory with the following information, and include your MySQL username (DB_USER) and password (DB_PASSWORD) between the single quotes:
 ```
